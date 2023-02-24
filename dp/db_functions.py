@@ -105,7 +105,12 @@ def add_visitor(name, number, email, national_id):
     qr_codes = sheet.col_values(1)
 
     # Get the first empty cell in 5th column
-    first_empty_cell = len(sheet.col_values(5)) + 1
+    mobile_numbers = sheet.col_values(5)
+    for i, number in enumerate(mobile_numbers):
+        if number == "":
+            first_empty_cell = i + 1
+            break 
+
 
     # Put parameters to sheet
     sheet.update_cell(first_empty_cell, 4, name)
