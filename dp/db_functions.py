@@ -108,7 +108,7 @@ def add_visitor(name, number, email, national_id):
     mobile_numbers = sheet.col_values(5)
     for i, number in enumerate(mobile_numbers):
         if number == "":
-            first_empty_cell = i + 1
+            first_empty_cell = i
             break 
 
 
