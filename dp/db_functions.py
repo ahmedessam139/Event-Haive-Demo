@@ -102,12 +102,11 @@ def add_visitor(name, number, email, national_id):
     sheet = client.open(sheet_name).sheet1
 
     # Get a list of QR code values from the first column
-    qr_codes = sheet.col_values(1)
 
     # Get the first empty cell in 5th column
     mobile_numbers = sheet.col_values(5)
     for i, numberr in enumerate(mobile_numbers):
-        if numberr == "":
+        if numberr == None or numberr == "":
             first_empty_cell = i+1
             break 
 
