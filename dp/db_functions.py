@@ -106,9 +106,9 @@ def add_visitor(name, number, email, national_id):
 
     # Get the first empty cell in 5th column
     mobile_numbers = sheet.col_values(5)
-    for i, number in enumerate(mobile_numbers):
-        if number == "":
-            first_empty_cell = i
+    for i, numberr in enumerate(mobile_numbers):
+        if numberr == "":
+            first_empty_cell = i+1
             break 
 
 
