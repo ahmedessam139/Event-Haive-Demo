@@ -25,8 +25,12 @@ def login():
 
 @app.get("/generateticket")
 def read_tracking():
-    print("Tracking page requested")
+    print("full data page requested")
     return FileResponse('templates/generateticket.html')
+@app.get("/generateticketbyid")
+def read_tracking():
+    print("id page requested")
+    return FileResponse('templates/generateticketbyid.html')
 ##########################
 
 
@@ -37,9 +41,31 @@ async def add_user(request: Request):
     # print(user_info)
     # add_user(user_info)
     try:
-        # print(type(user_info.get("name")),user_info.get("mobile"), user_info.get("email") ,user_info.get("nationalId"))
+        print(type(user_info.get("name")),user_info.get("mobile"))
         result = add_visitor(user_info.get("name"), user_info.get("mobile"), user_info.get(
             "email"), user_info.get("nationalId"))
+        
+    except Exception as e:
+        response_data = {"status": "Error in sheet(May be open)"+",Try again"}
+        print(e)
+        return response_data
+        #make result string
+
+    # str_result = str(result)
+    response_data = {"status": "ok",
+                     "ticket": result}
+    
+    return response_data
+
+@app.post("/add_user_by_number")
+async def add_user_by_number(request: Request):
+    user_info = await request.json()
+    print(user_info)
+    # print(user_info)
+    # add_user(user_info)
+    try:
+        # print(type(user_info.get("name")),user_info.get("mobile"), user_info.get("email") ,user_info.get("nationalId"))
+        result = add_visitor_by_number(user_info.get("mobile"), user_info.get("Id"))
         
     except Exception as e:
         response_data = {"status": "Error in sheet(May be open)"+",Try again"}

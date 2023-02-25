@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket by ID</title>
+    <link rel="stylesheet" href="/static/generateticketbyid.css">
+    <script src="/static/jquery.js"></script>
+    <script>
+        const API_URL = 'https://192.168.1.101'; 
+    </script>
+</head>
+
+<body>
+    <form class="form-container" autocomplete="off">
+        <h1 class="form-title">Ticket</h1>
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" autocomplete="false" >
+        <label for="national-id">Ticket ID</label>
+        <input type="text" id="national-id" name="national-id" placeholder="Enter national ID" 
+            autocomplete="off">
+        <input type="submit" value="Submit" id="submit-btn">
+        <a href="#" ></a>
+        </form>
+        <footer>
+            <div class="footer-content">
+                <a href="https://eventhive.info">
+                <img src="/static/logo.png" alt="eventhive.info">
+                <a href="https://eventhive.info">
+            </div>
+        </footer>
+    <script src="/static/generateticketbyid.js"></script>
+</body>
+
+</html>

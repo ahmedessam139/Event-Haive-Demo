@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 
     $('#tracking').click(function () {
-        location.href =`administration`;
+        location.href =`generateticketbyid`;
     });
 
     $('#database').click(function () {
