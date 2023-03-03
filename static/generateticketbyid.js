@@ -37,14 +37,13 @@ $form.on('submit', async function (event) {
 
 Dear Attendee,\n
         
--Please note that the link to your ticket will expire in two days, so it is necessary to save it as a screenshot on your device for easy access during the event.
+-Please note that the link to your ticket will expire‼️ in two days, so it is necessary to *save it as a screenshot on your device* for easy access during the event.
         
 -Additionally, please ensure that you have your ticket with you at all times throughout the event. This will help us maintain a secure and organized environment for all attendees.
         
--If you have any questions or concerns, please do not hesitate to contact us at +201146067319. We will be happy to assist you in any way we can.
-        
+-If you have any questions or concerns, please do not hesitate to contact us at +201111486231. 
+
 -Thank you for your cooperation, and we look forward to seeing you at our event!
-©️E-Tickets Managed by *Event Hive*
         
 Your Ticket:`;
 
@@ -57,7 +56,7 @@ Your Ticket:`;
 
 
         // Construct the WhatsApp URL with the user's phone number and message
-        const whatsapp_url = `https://wa.me/+2${$mobileInput.val()}?text=${encodeURIComponent(`${event_instructions}\n${ticket_url}`)}`;
+        const whatsapp_url = `https://wa.me/+2${$mobileInput.val()}?text=${encodeURIComponent(`${event_instructions}\n${ticket_url}\n©️E-Tickets Managed by *Event Hive*`)}`;
 
         $('#send-btn').on('click', function () {
             // Redirect to the WhatsApp URL
