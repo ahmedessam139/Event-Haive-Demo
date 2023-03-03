@@ -35,7 +35,7 @@ $form.on('submit', async function (event) {
         console.log(ticket_url);
         event_instructions = `--------Event Instructions--------
 
-Dear Attendee,\n
+Dear Attendee💙,\n
         
 -Please note that the link to your ticket will expire‼️ in two days, so it is necessary to *save it as a screenshot on your device* for easy access during the event.
         
@@ -44,6 +44,8 @@ Dear Attendee,\n
 -If you have any questions or concerns, please do not hesitate to contact us at +201111486231. 
 
 -Thank you for your cooperation, and we look forward to seeing you at our event!
+
+📌Reminder, all the event details are on the ticket
         
 Your Ticket:`;
 
